@@ -52,7 +52,7 @@ jobs:
           fi
 
           curl -L https://github.com/blueloveTH/aseprite/releases/download/v0.01/skia.zip --output skia.zip
-        
+          # 解壓方式更新：Windows 使用 PowerShell 的 Expand-Archive，Linux 仍使用 7z
           if [[ "${{ runner.os }}" == "Windows" ]]; then
             Expand-Archive -Path skia.zip -DestinationPath ./skia
           else
